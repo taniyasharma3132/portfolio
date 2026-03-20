@@ -737,6 +737,204 @@ section {
 }
 
 /* ════════════
+   EDUCATION
+════════════ */
+.education {
+  padding: 7rem 0;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.edu-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.edu-side {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.edu-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.edu-card {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.75rem;
+  background: var(--surface);
+  transition: var(--trans);
+  position: relative;
+}
+
+.edu-card:hover {
+  background: var(--surface-2);
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s var(--ease);
+  pointer-events: none;
+}
+
+.edu-card:hover::before {
+  transform: scaleY(1);
+}
+
+.edu-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: var(--trans);
+}
+
+.edu-card:hover .edu-icon {
+  border-color: var(--accent);
+  background: rgba(232, 255, 71, 0.08);
+}
+
+.edu-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.edu-school {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.edu-degree {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  margin-bottom: 0.5rem;
+}
+
+.edu-grade {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.edu-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+
+.edu-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-3);
+  flex-shrink: 0;
+}
+
+/* ════════════
+   ACTIVITIES
+════════════ */
+.activities {
+  padding: 7rem 0;
+}
+
+.acts-header {
+  margin-bottom: 3rem;
+}
+
+.acts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.act-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: var(--trans);
+}
+
+.act-card:hover {
+  border-color: rgba(232, 255, 71, 0.2);
+  background: var(--surface-2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.act-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: var(--trans);
+}
+
+.act-card:hover .act-icon {
+  border-color: var(--accent);
+  background: rgba(232, 255, 71, 0.08);
+}
+
+.act-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.act-title {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.act-desc {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+/* ════════════
    SKILLS
 ════════════ */
 .skills {
