@@ -1,0 +1,613 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taniya Sharma — Full Stack Developer</title>
+    <meta name="description"
+        content="Taniya Sharma – B.Tech CSE student at Lovely Professional University. Full Stack Developer building modern web applications." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=2" />
+</head>
+
+<body>
+
+    <!-- Simple dot cursor -->
+    <div class="dot-cursor" id="dot-cursor"></div>
+
+    <!-- Subtle noise canvas background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ══════ NAVBAR ══════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                Taniya Sharma
+                <span class="nav-logo-dot"></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active" data-s="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-s="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-s="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-s="projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-s="certifications">Certs</a></li>
+                <li><a href="#contact" class="nav-link" data-s="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-btn" title="Toggle theme">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg id="sun-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════ HERO ══════ -->
+    <section class="hero" id="home">
+        <div class="hero-wrap">
+
+            <!-- Left: intro text -->
+            <div class="hero-intro">
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    Available for Internship &amp; Projects
+                </div>
+
+                <h1 class="hero-heading" id="hero-h">
+                    <span class="line-word" style="--wi:0">Full</span>
+                    <span class="line-word" style="--wi:1"><span class="line-accent">Stack</span></span>
+                    <span class="line-word line-italic" style="--wi:2">Developer.</span>
+                </h1>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-lime">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                        View My Work
+                    </a>
+                    <a href="cv.pdf" download class="btn btn-ghost" id="dl-cv">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: photo card -->
+            <div class="hero-photo-card">
+                <img src="profile.png" alt="Taniya Sharma — Full Stack Developer" />
+                <div class="photo-tag">
+                    <div>
+                        <div class="photo-tag-name">Taniya Sharma</div>
+                        <div class="photo-tag-role">B.Tech CSE · LPU · 3rd Year</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio strip -->
+            <div class="hero-bio-strip">
+                <div class="bio-item">
+                    <span class="bio-label">University</span>
+                    <span class="bio-value">Lovely Professional Univ.</span>
+                </div>
+                <div class="bio-item">
+                    <span class="bio-label">Degree</span>
+                    <span class="bio-value">B.Tech — CSE (3rd Year)</span>
+                </div>
+                <div class="bio-item">
+                    <span class="bio-label">Focus</span>
+                    <span class="bio-value">Full Stack &amp; Web Dev</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-cue">
+            <div class="scroll-cue-line"></div>
+            <div class="scroll-cue-text">Scroll</div>
+        </div>
+
+        <!-- Socials -->
+        <div class="hero-socials-bar">
+            <a href="https://github.com" target="_blank" class="social-icon-link" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-link" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
+            <a href="mailto:taniyasharma@example.com" class="social-icon-link" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,12 2,6" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ══════ ABOUT ══════ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Photo col -->
+                <div class="about-img-col reveal" style="--d:0s">
+                    <div class="about-photo-frame">
+                        <img src="profile.png" alt="Taniya Sharma" />
+                    </div>
+                    <div class="about-stat-block">
+                        <div class="about-stat-num">15+</div>
+                        <div class="about-stat-label">Projects Built</div>
+                    </div>
+                </div>
+
+                <!-- Content col -->
+                <div class="about-content">
+                    <div class="section-eyebrow reveal" style="--d:0.05s">About Me</div>
+                    <h2 class="section-title reveal" style="--d:0.1s">
+                        Who is<br><em>Taniya?</em>
+                    </h2>
+
+                    <p class="about-lead reveal" style="--d:0.15s">
+                        Motivated 3rd year B.Tech CSE student who turns ideas into real products through clean code and
+                        sharp design.
+                    </p>
+                    <p class="about-body reveal" style="--d:0.2s">
+                        I'm studying at <strong style="color:#f2f0eb">Lovely Professional University</strong> and
+                        specialise in building scalable, full-stack web applications — from crafting pixel-perfect UIs
+                        to architecting robust APIs and databases.
+                    </p>
+                    <p class="about-body reveal" style="--d:0.25s">
+                        I'm currently open to internship opportunities and collaborative projects where I can
+                        contribute, learn, and grow alongside talented teams.
+                    </p>
+
+                    <div class="about-grid-stats reveal" style="--d:0.3s">
+                        <div class="about-mini-stat">
+                            <div class="mini-num">15+</div>
+                            <div class="mini-label">Projects</div>
+                        </div>
+                        <div class="about-mini-stat">
+                            <div class="mini-num">10+</div>
+                            <div class="mini-label">Technologies</div>
+                        </div>
+                        <div class="about-mini-stat">
+                            <div class="mini-num">3rd</div>
+                            <div class="mini-label">Year B.Tech</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions reveal" style="--d:0.35s">
+                        <a href="#contact" class="btn btn-lime">Get In Touch</a>
+                        <a href="#projects" class="btn btn-ghost">See Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ SKILLS ══════ -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills-layout">
+                <!-- Sticky side label -->
+                <div class="skills-side">
+                    <div class="section-eyebrow reveal" style="--d:0s">Expertise</div>
+                    <h2 class="section-title reveal" style="--d:0.05s">Tech<br><em>Stack.</em></h2>
+                    <p class="skills-side-desc reveal" style="--d:0.1s">
+                        Technologies I work with actively — from frontend interfaces to databases and deployment tools.
+                    </p>
+                    <a href="#contact" class="btn btn-lime reveal" style="--d:0.15s">Work With Me</a>
+                </div>
+
+                <!-- Skill rows -->
+                <div class="skills-main">
+                    <div class="skill-row reveal" style="--d:0.1s">
+                        <div class="skill-row-header">
+                            <div class="skill-cat-name"><span>🎨</span> Frontend</div>
+                            <span class="skill-count">4 skills</span>
+                        </div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>HTML5 &amp; CSS3</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>JavaScript ES6+</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>React.js</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Tailwind CSS</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row reveal" style="--d:0.15s">
+                        <div class="skill-row-header">
+                            <div class="skill-cat-name"><span>⚙️</span> Backend</div>
+                            <span class="skill-count">4 skills</span>
+                        </div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Node.js</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Express.js</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Python</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>REST APIs</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row reveal" style="--d:0.2s">
+                        <div class="skill-row-header">
+                            <div class="skill-cat-name"><span>🗄️</span> Database &amp; Auth</div>
+                            <span class="skill-count">5 skills</span>
+                        </div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>MongoDB</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>MySQL</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Firebase</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>JWT</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>bcrypt</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row reveal" style="--d:0.25s">
+                        <div class="skill-row-header">
+                            <div class="skill-cat-name"><span>🛠️</span> Tools &amp; Platform</div>
+                            <span class="skill-count">4 skills</span>
+                        </div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Git &amp; GitHub</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Cloudinary</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>VS Code</div>
+                            <div class="skill-pill"><span class="skill-pill-dot"></span>Docker (basics)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ PROJECTS ══════ -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <div>
+                    <div class="section-eyebrow reveal" style="--d:0s">My Work</div>
+                    <h2 class="section-title reveal" style="--d:0.05s">Featured<br><em>Projects.</em></h2>
+                </div>
+                <div class="project-filter-row reveal" style="--d:0.1s">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-chip" data-filter="frontend">Frontend</button>
+                    <button class="filter-chip" data-filter="backend">Backend</button>
+                </div>
+            </div>
+
+            <div class="projects-list reveal" style="--d:0.15s" id="proj-list">
+
+                <!-- Project 01: Holistic Wellness Monitor -->
+                <div class="project-item project-card" data-category="fullstack">
+                    <div class="proj-card-top">
+                        <div class="proj-num">01</div>
+                        <div class="proj-date">Oct 2025 – Dec 2025</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-name">
+                            Holistic Wellness Monitor
+                            <a href="https://github.com/taniyasharma3132/holisticwellnessmonitor" target="_blank" class="proj-github-link" title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                        <ul class="proj-bullets">
+                            <li>Engineered a full-stack health tracking application with interactive dashboard for nutrition, workouts, and vital metrics</li>
+                            <li>Integrated AI-powered chatbot (Gemini API) to deliver personalized wellness insights and recommendations</li>
+                            <li>Strengthened application security through JWT and Google OAuth, ensuring a seamless and responsive user experience</li>
+                        </ul>
+                    </div>
+                    <div class="proj-meta">
+                        <span class="proj-tag">React</span>
+                        <span class="proj-tag">Node.js</span>
+                        <span class="proj-tag">Express</span>
+                        <span class="proj-tag">MongoDB</span>
+                        <span class="proj-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Project 02: Appointment Booking System -->
+                <div class="project-item project-card" data-category="fullstack">
+                    <div class="proj-card-top">
+                        <div class="proj-num">02</div>
+                        <div class="proj-date">Mar 2025 – May 2025</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-name">
+                            Appointment Booking System
+                            <a href="https://github.com/taniyasharma3132/appointment-booking" target="_blank" class="proj-github-link" title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                        <ul class="proj-bullets">
+                            <li>Built a web-based system for efficient appointment booking and management</li>
+                            <li>Established secure access via authentication and session management mechanisms</li>
+                            <li>Structured modules for doctor listing and streamlined appointment scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="proj-meta">
+                        <span class="proj-tag">PHP</span>
+                        <span class="proj-tag">HTML</span>
+                        <span class="proj-tag">CSS</span>
+                        <span class="proj-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Project 03: Scribe Blogging Platform -->
+                <div class="project-item project-card" data-category="fullstack">
+                    <div class="proj-card-top">
+                        <div class="proj-num">03</div>
+                        <div class="proj-date">Jan 2026 – Feb 2026</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-name">
+                            Scribe Blogging Platform
+                            <a href="https://github.com/taniyasharma3132/scribeblogging" target="_blank" class="proj-github-link" title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                        <ul class="proj-bullets">
+                            <li>Developed a full-stack blogging platform for creating and managing blogs with comment functionality</li>
+                            <li>Enabled secure user authentication using Firebase, JWT, and protected routes</li>
+                            <li>Designed RESTful APIs for efficient CRUD operations on blogs, comments, and user data</li>
+                        </ul>
+                    </div>
+                    <div class="proj-meta">
+                        <span class="proj-tag">React</span>
+                        <span class="proj-tag">Node.js</span>
+                        <span class="proj-tag">Express</span>
+                        <span class="proj-tag">Firebase</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ CERTIFICATIONS ══════ -->
+    <section class="certifications" id="certifications">
+        <div class="container">
+            <div class="certs-header">
+                <div class="section-eyebrow reveal" style="--d:0s">Credentials</div>
+                <h2 class="section-title reveal" style="--d:0.05s">Certifi&shy;<em>cations.</em></h2>
+            </div>
+            <div class="certs-grid reveal" style="--d:0.1s">
+
+                <!-- Cert 1 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                            <polyline points="9 11 12 14 22 4" />
+                        </svg>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-name">Foundations of Project Management</div>
+                        <div class="cert-issuer">Google · Coursera</div>
+                    </div>
+                    <div class="cert-right">
+                        <div class="cert-date">Sep 2025</div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/EYIOWT6JGUKU" target="_blank" class="cert-verify-btn">Verify
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-name">Introduction to DevOps</div>
+                        <div class="cert-issuer">IBM · Coursera</div>
+                    </div>
+                    <div class="cert-right">
+                        <div class="cert-date">Sep 2025</div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/7ZOK6GLE3J7R" target="_blank" class="cert-verify-btn">Verify
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-name">Introduction to Front-End Development</div>
+                        <div class="cert-issuer">Meta · Coursera</div>
+                    </div>
+                    <div class="cert-right">
+                        <div class="cert-date">Sep 2025</div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/IEEDDWAJSVK3" target="_blank" class="cert-verify-btn">Verify
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ CONTACT ══════ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-eyebrow reveal" style="--d:0s">Get In Touch</div>
+            <h2 class="section-title reveal" style="--d:0.05s" style="margin-bottom:3rem">
+                Let's build<br><em>something great.</em>
+            </h2>
+
+            <div class="contact-layout" style="margin-top:3rem">
+                <!-- Left -->
+                <div class="contact-left reveal" style="--d:0.1s">
+                    <p style="color:var(--text-2);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem">
+                        I'm open to internship opportunities, freelance projects, and exciting collaborations. Feel free
+                        to reach out — I respond promptly!
+                    </p>
+                    <a href="mailto:taniyasharma@example.com" class="contact-big-email">
+                        taniyasharma@example.com
+                    </a>
+
+                    <div class="contact-links">
+                        <a href="https://linkedin.com" target="_blank" class="contact-link-item">
+                            <div class="contact-link-info">
+                                <div class="contact-link-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-link-name">LinkedIn</div>
+                                    <div class="contact-link-handle">linkedin.com/in/taniyasharma</div>
+                                </div>
+                            </div>
+                            <div class="contact-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg></div>
+                        </a>
+
+                        <a href="https://github.com" target="_blank" class="contact-link-item">
+                            <div class="contact-link-info">
+                                <div class="contact-link-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-link-name">GitHub</div>
+                                    <div class="contact-link-handle">github.com/taniyasharma</div>
+                                </div>
+                            </div>
+                            <div class="contact-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form-wrap reveal" style="--d:0.15s">
+                    <div class="form-title">Send a Message</div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-name">Name</label>
+                                <input type="text" id="c-name" placeholder="Your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">Email</label>
+                                <input type="email" id="c-email" placeholder="you@example.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-subject">Subject</label>
+                            <input type="text" id="c-subject"
+                                placeholder="Project Inquiry / Internship / Just saying hi" />
+                        </div>
+                        <div class="form-group">
+                            <label for="c-msg">Message</label>
+                            <textarea id="c-msg" rows="5" placeholder="Tell me about what you have in mind..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lime" id="submit-btn" style="align-self:flex-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                            Send Message
+                        </button>
+                        <div class="form-success" id="form-success">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Sent! I'll get back to you soon 🙌
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ FOOTER ══════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">Taniya<span class="accent">.</span></div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certifications">Certs</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Taniya Sharma — All rights reserved.</span>
+                <span>Made with curiosity &amp; coffee ☕</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
