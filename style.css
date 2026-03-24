@@ -647,7 +647,7 @@ section {
   font-weight: 800;
   line-height: 0.85;
   letter-spacing: -4px;
-  color: #00d4ff; /* Vibrant Cyan */
+  color: var(--accent); /* Electric Lime */
   margin-bottom: 2rem;
 }
 
