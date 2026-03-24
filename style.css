@@ -1301,6 +1301,25 @@ section {
   background: rgba(232, 255, 71, 0.06);
 }
 
+.proj-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.proj-live-link {
+  border-color: rgba(74, 222, 128, 0.4);
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.06);
+}
+
+.proj-live-link:hover {
+  border-color: #4ade80;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+}
+
 .proj-bullets {
   list-style: none;
   padding: 0;
